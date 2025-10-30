@@ -13,6 +13,7 @@
         <button>Log out</button>
     </form>
     @else
+    <div>
         <h2>Register</h2>
         <form action="/register" method="POST">
             @csrf
@@ -20,10 +21,15 @@
             <input name="email" type="email" placeholder="email">
             <input name="password"type="password" placeholder="password">
             <button type="submit">Register</button>
-    @endauth
-
-
-
     </div>
+    <div>
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            @csrf
+            <input name="loginname" type="text" placeholder="name">
+            <input name="loginpw"type="password" placeholder="password">
+            <button type="submit">Log in</button>
+    </div>
+    @endauth
 </body>
 </html>
