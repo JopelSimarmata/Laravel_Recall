@@ -12,6 +12,16 @@
         @csrf
         <button>Log out</button>
     </form>
+
+    <div>
+        <h2>Create a New Post</h2>
+        <form action="/create-post" method="POST">
+            @csrf
+            <input type="text" name="title" placeholder="post title">
+            <textarea name="body" placeholder="body content....."></textarea>
+            <button>Save Post</button>
+    </div>
+    
     @else
     <div>
         <h2>Register</h2>
@@ -21,6 +31,7 @@
             <input name="email" type="email" placeholder="email">
             <input name="password"type="password" placeholder="password">
             <button type="submit">Register</button>
+        </form>
     </div>
     <div>
         <h2>Login</h2>
@@ -29,6 +40,7 @@
             <input name="loginname" type="text" placeholder="name">
             <input name="loginpw"type="password" placeholder="password">
             <button type="submit">Log in</button>
+        </form>
     </div>
     @endauth
 </body>
